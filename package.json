@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": ""
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev add-profile",
+    "studio": "npx prisma studio"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/sinbbgirl/instaclone-backend/issues"
   },
-  "homepage": "https://github.com/sinbbgirl/instaclone-backend#readme"
+  "homepage": "https://github.com/sinbbgirl/instaclone-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^2.22.1",
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.1",
+    "nodemon": "^2.0.7",
+    "prisma": "^2.22.1"
+  }
 }
